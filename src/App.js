@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css';
+import Page from './component/page/Page';
 
 function App() {
   return (
-    <div className="App">
-      h1
-    </div>
+    <>
+      <Page/>
+    </>
   );
 }
 
