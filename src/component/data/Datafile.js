@@ -1,7 +1,7 @@
 export const manu =[
     {
       text:"Shop",
-      path:"/shop",
+      path:"/",
     },
     {
       text:"Men",

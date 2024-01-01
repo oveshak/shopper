@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./header.css"
 import { manu } from '../../data/Datafile'
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     const [menu,setMenu]=useState("Shop")
@@ -13,17 +13,23 @@ const Header = () => {
                 <p>SHOPPER</p>
             </div>
            <div className='menu'>
+           
            {
                 manu.map((item)=>(
                     <ul className='nav-menu'>
-                        <li onClick={()=>{setMenu(item.text)}}><Link to={item.path}>{item.text}</Link> {menu===(item.text)?<hr/>:<></>}</li>
+                        <li onClick={()=>{setMenu(item.text)}}>
+                            <Link to={item.path}>{item.text} </Link> {menu===(item.text)?<hr/>:<></>}
+                        </li>
                     </ul>
                 ))
             }
+            
            </div>
             <div className='nav-login-cart'>
-                <button>Login</button>
-                <img src='./images/cart_icon.png' alt=''/>
+                <Link to="./login"><button>Login</button></Link>
+                <Link to="./cart">
+                <img src='./images/cart_icon.png' alt=''/>                
+                </Link>
                 <div className='nav-cart-count'>
                     0 
                 </div>
