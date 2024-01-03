@@ -9,6 +9,7 @@ const Page = () => {
     <Header/>
     <Routes>
       <Route path='/' element={<Shop/>}/>
+      
     </Routes>
     </BrowserRouter>
     
